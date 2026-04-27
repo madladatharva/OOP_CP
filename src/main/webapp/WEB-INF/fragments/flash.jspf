@@ -1,0 +1,15 @@
+<%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+
+<c:if test="${not empty flashMessage}">
+    <div class="alert ${flashType eq 'success' ? 'alert-success' : flashType eq 'warning' ? 'alert-warning' : flashType eq 'info' ? 'alert-info' : 'alert-error'} animate-fade-in">
+        <span class="material-icons-outlined">
+            <c:choose>
+                <c:when test="${flashType eq 'success'}">check_circle</c:when>
+                <c:when test="${flashType eq 'warning'}">warning</c:when>
+                <c:when test="${flashType eq 'info'}">info</c:when>
+                <c:otherwise>error</c:otherwise>
+            </c:choose>
+        </span>
+        <span>${flashMessage}</span>
+    </div>
+</c:if>

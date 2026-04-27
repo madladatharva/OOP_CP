@@ -1,0 +1,14 @@
+# Maven build output
+/target/
+
+# Runtime logs
+/logs/*.log
+
+# Keep the logs directory
+!/logs/.gitkeep
+
+# OS / editor files
+.DS_Store
+.vscode/
+.idea/
+*.iml
